@@ -4,6 +4,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView
 
 import blog
+from .forms import EmailPostForm
 from .models import Post
 
 
@@ -43,3 +44,19 @@ def post_detail(request, year, month, day, post):
     return render(request,
                   'blog/post/detail.html',
                   {'post':post})
+
+
+# 포스트 공유
+def post_share(request, post_id):
+    # id로 게시물 조회
+    post = get_object_or_404(Post, id=post_id, status=Post.Status.PUBLISHED)
+    if request.method == 'POST':
+        # 폼이 제출되었다면
+        form = EmailPostForm(request.POST)
+        if form.is_valid():
+            cd = form.cleaned_data
+            # ... 이메일 전송
+    else:
+        form = EmailPostForm()
+    return render(request, 'blog/templates/post/share.html',
+                  {'post': post, 'form': form})
