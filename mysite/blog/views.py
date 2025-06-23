@@ -1,7 +1,12 @@
+import os
+
+from django.core.mail import send_mail
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.http import Http404
 from django.shortcuts import render, get_object_or_404
+from django.views.decorators.debug import sensitive_post_parameters
 from django.views.generic import ListView
+from dotenv import load_dotenv
 
 import blog
 from .forms import EmailPostForm
@@ -23,6 +28,7 @@ from .models import Post
 #     return render(request,
 #                   'blog/post/list.html',
 #                   {'posts':posts})
+load_dotenv()
 
 # 포스트 목록 클래스
 class PostListView(ListView):
@@ -50,13 +56,18 @@ def post_detail(request, year, month, day, post):
 def post_share(request, post_id):
     # id로 게시물 조회
     post = get_object_or_404(Post, id=post_id, status=Post.Status.PUBLISHED)
+    sent = False
     if request.method == 'POST':
         # 폼이 제출되었다면
         form = EmailPostForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
-            # ... 이메일 전송
+            post_url = request.build_absolute_uri(post.get_absolute_url())
+            subject = f"{cd['name']} recommends you read {post.title}"
+            message = f"Read {post.title} at {post_url} \n\n"
+            send_mail(subject, message, os.getenv("EMAIL_USER"), [cd['to']])
+            sent = True
     else:
         form = EmailPostForm()
-    return render(request, 'blog/templates/post/share.html',
-                  {'post': post, 'form': form})
+    return render(request, 'blog/post/share.html',
+                  {'post': post, 'form': form, 'sent':sent})
