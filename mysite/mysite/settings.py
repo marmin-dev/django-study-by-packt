@@ -9,9 +9,10 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
+from dotenv import load_dotenv
 from pathlib import Path
 
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,6 +27,12 @@ SECRET_KEY = 'django-insecure-t*#x(=)x12ba!x_qhyjehb!z*uczw*myj11gbu5+@z%83ra2$b
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+# env
+load_dotenv()
+
+email_user = os.getenv('EMAIL_USER')
+email_password = os.getenv('EMAIL_PASSWORD')
 
 
 # Application definition
@@ -125,8 +132,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Email 서버 구성
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_USER = email_user
+EMAIL_HOST_PASSWORD = email_password
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
