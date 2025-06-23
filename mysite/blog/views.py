@@ -5,11 +5,12 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.http import Http404
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.debug import sensitive_post_parameters
+from django.views.decorators.http import require_POST
 from django.views.generic import ListView
 from dotenv import load_dotenv
 
 import blog
-from .forms import EmailPostForm
+from .forms import EmailPostForm, CommentForm
 from .models import Post
 
 
@@ -39,17 +40,20 @@ class PostListView(ListView):
 
 
 # 포스트 상세 페이지
+# 이 글의 active 댓글 목록
 def post_detail(request, year, month, day, post):
-    # SEO 개선을 위해 연, 월, 일 사용
     post = get_object_or_404(Post,
                              status=Post.Status.PUBLISHED,
                              slug=post,
                              publish__year=year,
                              publish__month=month,
                              publish__day=day)
-    return render(request,
-                  'blog/post/detail.html',
-                  {'post':post})
+    # 이 글의 active 댓글 목록
+    comments = post.comments.filter(active=True)
+    # 사용자가 댓글을 달 수 있는 폼
+    form = CommentForm()
+    return render(request, 'blog/post/detail.html',
+                  {'post':post, 'comments':comments, 'form':form})
 
 
 # 포스트 공유
@@ -71,3 +75,21 @@ def post_share(request, post_id):
         form = EmailPostForm()
     return render(request, 'blog/post/share.html',
                   {'post': post, 'form': form, 'sent':sent})
+
+
+@require_POST
+def post_comment(request, post_id):
+    post = get_object_or_404(Post, id=post_id, status=Post.Status.PUBLISHED)
+    comment = None
+    # 댓글이 달림
+    form = CommentForm(data = request.POST)
+    if form.is_valid():
+        # 데이터 베이스에 저장하지 않고 Comment 객체 만들기
+        comment = form.save(commit=False)
+        comment.post = post
+        comment.save()
+    return render(request, 'blog/post/comment.html',
+                  {'post':post, 'form': form, 'comment':comment})
+
+
+

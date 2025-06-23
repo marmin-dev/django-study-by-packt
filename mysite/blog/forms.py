@@ -1,5 +1,5 @@
 from django import forms
-
+from .models import  Comment
 
 class EmailPostForm(forms.Form):
     name = forms.CharField(max_length=25)
@@ -8,3 +8,9 @@ class EmailPostForm(forms.Form):
     comments = forms.CharField(
         required=False,
         widget=forms.Textarea)
+
+# 동적으로 만들기 위해 모델 폼 사용
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ['name', 'email', 'body']
