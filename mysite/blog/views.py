@@ -27,7 +27,7 @@ def post_list(request, tag_slug=None):
     paginator = Paginator(post_list, 3)
     page_number = request.GET.get('page', 1)
     try:
-        posts = paginator.get_page(page_number)
+        posts = paginator.page(page_number)
     except PageNotAnInteger:
         # page_number 이 정수가 아닌 경우 첫 번째 페이지 전달
         posts = paginator.page(1)
