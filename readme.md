@@ -6,7 +6,8 @@
 ### 디렉터리 구분
 - mysite : 블로그 애플리케이션 (1~3 장)
 
-
+### Docker 실행
+- PostGreSQL : ` docker compose -f postgres-docker-compose.yml up -d`
 
 ### 참조 URL
 - 플루언트 Reader 다운로드 링크 : https://github.com/yang991178/fluent-reader/releases
