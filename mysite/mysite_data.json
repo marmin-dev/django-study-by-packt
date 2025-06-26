@@ -1,0 +1,908 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-06-17T00:40:43.032Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "그래도 그 중에 한가진 이루었지",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-06-17T00:46:13.313Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "나는 나비",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-06-18T00:48:35.562Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Damn you changed title",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-06-18T01:49:28.194Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "그래도 그 중에 한가진 이루었지",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-06-18T01:49:31.793Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "그래도 그 중에 한가진 이루었지",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-06-18T01:49:37.666Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "나는 나비",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-06-18T01:50:52.044Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "사라지네",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-06-25T00:19:06.293Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "나는 나비",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-06-26T00:12:27.452Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "supa dupa",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add post",
+    "content_type": 7,
+    "codename": "add_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change post",
+    "content_type": 7,
+    "codename": "change_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete post",
+    "content_type": 7,
+    "codename": "delete_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view post",
+    "content_type": 7,
+    "codename": "view_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add comment",
+    "content_type": 8,
+    "codename": "add_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change comment",
+    "content_type": 8,
+    "codename": "change_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete comment",
+    "content_type": 8,
+    "codename": "delete_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view comment",
+    "content_type": 8,
+    "codename": "view_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add tag",
+    "content_type": 9,
+    "codename": "add_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change tag",
+    "content_type": 9,
+    "codename": "change_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete tag",
+    "content_type": 9,
+    "codename": "delete_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view tag",
+    "content_type": 9,
+    "codename": "view_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add tagged item",
+    "content_type": 10,
+    "codename": "add_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change tagged item",
+    "content_type": 10,
+    "codename": "change_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete tagged item",
+    "content_type": 10,
+    "codename": "delete_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view tagged item",
+    "content_type": 10,
+    "codename": "view_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add site",
+    "content_type": 11,
+    "codename": "add_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change site",
+    "content_type": 11,
+    "codename": "change_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete site",
+    "content_type": 11,
+    "codename": "delete_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view site",
+    "content_type": 11,
+    "codename": "view_site"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$M3WQ6T42jPgpnuyp4tWbfU$2/xrm9It9ZqVRLNc+PcgwAqfJzAxbBgol8Z3nx6dTBA=",
+    "last_login": "2025-06-26T00:11:40.800Z",
+    "is_superuser": true,
+    "username": "marmin",
+    "first_name": "",
+    "last_name": "",
+    "email": "xodnrxo17@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-06-17T00:35:46.210Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "blog",
+    "model": "post"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "blog",
+    "model": "comment"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "taggit",
+    "model": "tag"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "taggit",
+    "model": "taggeditem"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "sites",
+    "model": "site"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "a8n88k6g1bgb5a11oyteltkslfq53d4b",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHyGB4u3fcbyMCAVA0kpV0Z_12bdKHbe865LxZwW2vYRl7CTOzCBDv9bhHTI7cd0B3brfPU27rMke8KP-jgU6f8vB7u30HFUb-1i945KOTRZm11UgI0lowGlENFNhkQGn3GEi14LwQY0t4kWdAleZbs_QHkuze-:1uRgyX:BpRgJXQA3NnbzPTNd6nk3UuPHhfcS2RcT8uvf9OApzE",
+    "expire_date": "2025-07-02T00:48:25.220Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "u0vcbqnjpgwb7qkpup3dq8ourojtkyil",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHyGB4u3fcbyMCAVA0kpV0Z_12bdKHbe865LxZwW2vYRl7CTOzCBDv9bhHTI7cd0B3brfPU27rMke8KP-jgU6f8vB7u30HFUb-1i945KOTRZm11UgI0lowGlENFNhkQGn3GEi14LwQY0t4kWdAleZbs_QHkuze-:1uUaDM:xhIbNi9SH1U_C2sOGPMYxNKnG4H3K_hlZ3BlVi84E18",
+    "expire_date": "2025-07-10T00:11:40.812Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "zf3lq2pobos6gm8f0wqq6d1iwn8d5dop",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHyGB4u3fcbyMCAVA0kpV0Z_12bdKHbe865LxZwW2vYRl7CTOzCBDv9bhHTI7cd0B3brfPU27rMke8KP-jgU6f8vB7u30HFUb-1i945KOTRZm11UgI0lowGlENFNhkQGn3GEi14LwQY0t4kWdAleZbs_QHkuze-:1uRKJt:n_y9Szc7rQD4ggVJK1j7AsZEIvL5Aw2cEiZmRWlgvhU",
+    "expire_date": "2025-07-01T00:36:57.090Z"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 1,
+  "fields": {
+    "title": "그래도 그 중에 한가진 이루었지",
+    "slug": "4321",
+    "author": 1,
+    "body": "나는 타잔~",
+    "publish": "2025-06-17T00:38:28Z",
+    "created": "2025-06-17T00:40:43.031Z",
+    "updated": "2025-06-18T01:49:31.791Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 2,
+  "fields": {
+    "title": "나는 나비",
+    "slug": "butterfly",
+    "author": 1,
+    "body": "한번 두번 다시",
+    "publish": "2025-06-17T00:45:20Z",
+    "created": "2025-06-17T00:46:13.311Z",
+    "updated": "2025-06-25T00:19:06.288Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 3,
+  "fields": {
+    "title": "Damn you changed title",
+    "slug": "hey-you",
+    "author": 1,
+    "body": "body body",
+    "publish": "2025-06-17T00:54:12Z",
+    "created": "2025-06-17T00:54:17.636Z",
+    "updated": "2025-06-18T00:48:35.562Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 4,
+  "fields": {
+    "title": "사라지네",
+    "slug": "disappear",
+    "author": 1,
+    "body": "돌고 돌고 돌고",
+    "publish": "2025-06-18T01:50:26Z",
+    "created": "2025-06-18T01:50:52.042Z",
+    "updated": "2025-06-18T01:50:52.042Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 5,
+  "fields": {
+    "title": "supa dupa",
+    "slug": "supa-dupa",
+    "author": 1,
+    "body": "# 어떤 일일까\r\n## 수파두파~\r\n### 아야츠노 유니\r\n어쩜 이렇게 재미 없는지",
+    "publish": "2025-06-26T00:11:44Z",
+    "created": "2025-06-26T00:12:27.446Z",
+    "updated": "2025-06-26T00:12:27.446Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 1,
+  "fields": {
+    "post": 4,
+    "name": "안녕",
+    "email": "test@test.org",
+    "body": "나는 나비",
+    "created": "2025-06-23T01:24:55.517Z",
+    "updated": "2025-06-23T01:24:55.517Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 2,
+  "fields": {
+    "post": 2,
+    "name": "duke",
+    "email": "test@test.org",
+    "body": "듀크",
+    "created": "2025-06-23T01:30:59.664Z",
+    "updated": "2025-06-23T01:30:59.664Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 3,
+  "fields": {
+    "post": 4,
+    "name": "나비",
+    "email": "test@test.org",
+    "body": "돌고 도는 나비",
+    "created": "2025-06-23T01:32:26.130Z",
+    "updated": "2025-06-23T01:32:26.130Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 4,
+  "fields": {
+    "post": 4,
+    "name": "나비",
+    "email": "test@test.org",
+    "body": "돌고 도는 나비",
+    "created": "2025-06-23T01:34:10.210Z",
+    "updated": "2025-06-23T01:34:10.210Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 5,
+  "fields": {
+    "post": 4,
+    "name": "나비",
+    "email": "test@test.org",
+    "body": "돌고 도는 나비",
+    "created": "2025-06-23T01:34:12.328Z",
+    "updated": "2025-06-23T01:34:12.328Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 6,
+  "fields": {
+    "post": 3,
+    "name": "박태욱",
+    "email": "test@test.org",
+    "body": "나는 살아있는가",
+    "created": "2025-06-23T01:37:33.643Z",
+    "updated": "2025-06-23T01:37:33.643Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 7,
+  "fields": {
+    "post": 3,
+    "name": "엔더맨",
+    "email": "test@test.org",
+    "body": "테스트",
+    "created": "2025-06-23T01:41:13.922Z",
+    "updated": "2025-06-23T01:41:13.922Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 8,
+  "fields": {
+    "post": 2,
+    "name": "듀라한",
+    "email": "du@test.org",
+    "body": "듀라한 갤 최고",
+    "created": "2025-06-25T23:59:08.034Z",
+    "updated": "2025-06-25T23:59:08.034Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 9,
+  "fields": {
+    "post": 2,
+    "name": "듀라한",
+    "email": "du@test.org",
+    "body": "서리한",
+    "created": "2025-06-25T23:59:26.051Z",
+    "updated": "2025-06-25T23:59:26.051Z",
+    "active": true
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 1,
+  "fields": {
+    "name": "music",
+    "slug": "music"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 2,
+  "fields": {
+    "name": "jazz",
+    "slug": "jazz"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 3,
+  "fields": {
+    "name": "django",
+    "slug": "django"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 4,
+  "fields": {
+    "name": "pop",
+    "slug": "pop"
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 1,
+  "fields": {
+    "tag": 1,
+    "content_type": 7,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 2,
+  "fields": {
+    "tag": 2,
+    "content_type": 7,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 4,
+  "fields": {
+    "tag": 2,
+    "content_type": 7,
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 5,
+  "fields": {
+    "tag": 4,
+    "content_type": 7,
+    "object_id": 5
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 1,
+  "fields": {
+    "domain": "example.com",
+    "name": "example.com"
+  }
+}
+]

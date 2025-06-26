@@ -1,0 +1,7 @@
+EMAIL_USER={email}
+EMAIL_PASSWORD={email key}
+
+POSTGRES_HOST={host}
+POSTGRES_USER={user}
+POSTGRES_DATABASE={database name}
+POSTGRES_PASSWORD={password}
