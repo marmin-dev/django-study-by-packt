@@ -1,18 +1,15 @@
 import os
 
+from django.contrib.postgres.search import SearchVector
 from django.core.mail import send_mail
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.db.models import Count
-from django.http import Http404
 from django.shortcuts import render, get_object_or_404
-from django.views.decorators.debug import sensitive_post_parameters
 from django.views.decorators.http import require_POST
-from django.views.generic import ListView
 from dotenv import load_dotenv
 from taggit.models import Tag
 
-import blog
-from .forms import EmailPostForm, CommentForm
+from .forms import EmailPostForm, CommentForm, SearchForm
 from .models import Post
 
 # 변수 불러오기
@@ -92,6 +89,7 @@ def post_share(request, post_id):
                   {'post': post, 'form': form, 'sent':sent})
 
 
+# 댓글 추가
 @require_POST
 def post_comment(request, post_id):
     post = get_object_or_404(Post, id=post_id, status=Post.Status.PUBLISHED)
@@ -107,4 +105,25 @@ def post_comment(request, post_id):
                   {'post':post, 'form': form, 'comment':comment})
 
 
+# 게시글 검색
+def post_search(request):
+    form = SearchForm()
+    query = None
+    results = []
+
+    if 'query' in request.GET:
+        form = SearchForm(request.GET)
+        if form.is_valid():
+            query = form.cleaned_data['query']
+            results = Post.published.annotate(
+                search=SearchVector('title', 'body')
+            ).filter(search=query)
+    return render(
+        request,
+        'blog/post/search.html',
+        {
+            'form': form,
+            'query': query,
+            'results': results
+        })
 
