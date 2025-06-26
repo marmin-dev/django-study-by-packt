@@ -34,6 +34,8 @@ load_dotenv()
 email_user = os.getenv('EMAIL_USER')
 email_password = os.getenv('EMAIL_PASSWORD')
 
+# sitemap
+SITE_ID = 1
 
 # Application definition
 
@@ -45,7 +47,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
-    'taggit'
+    'taggit',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
+
 ]
 
 MIDDLEWARE = [
