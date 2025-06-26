@@ -9,5 +9,10 @@
 ### Docker 실행
 - PostGreSQL : ` docker compose -f postgres-docker-compose.yml up -d`
 
+### Django 명령어
+- 개발 서버 시작 : `python manage.py runserver`
+- 쉘 시작 : `python manage.py shell`
+- 데이터 덤프 : `python manage.py dumpdata --intent=2 --output={filename}.json`
+
 ### 참조 URL
 - 플루언트 Reader 다운로드 링크 : https://github.com/yang991178/fluent-reader/releases
