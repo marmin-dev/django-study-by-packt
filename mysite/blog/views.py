@@ -1,6 +1,6 @@
 import os
 
-from django.contrib.postgres.search import SearchVector
+from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank, TrigramSimilarity
 from django.core.mail import send_mail
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.db.models import Count
@@ -115,9 +115,18 @@ def post_search(request):
         form = SearchForm(request.GET)
         if form.is_valid():
             query = form.cleaned_data['query']
+            # 스페인어 불용어제거
+            # 검색 가중치 설정
+            # search_vector = SearchVector('title', config='spanish', weight='A') + \
+            #                  SearchVector( 'body', config='spanish', weight='B')
+            # search_query = SearchQuery(query, config='spanish')
+            # SearchQuery 객체를 만들고 이를 기준으로 결과를 필터링한 후 SearchRank를 사용해 관련성에 따라 결과 정렬
             results = Post.published.annotate(
-                search=SearchVector('title', 'body')
-            ).filter(search=query)
+                # search=search_vector,
+                # rank=SearchRank(search_vector, search_query)
+                similarity=TrigramSimilarity('title', query)
+            ).filter(similarity__gt=0.1).order_by('-similarity')
+    print(results)
     return render(
         request,
         'blog/post/search.html',
