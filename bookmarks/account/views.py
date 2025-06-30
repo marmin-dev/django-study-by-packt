@@ -29,6 +29,7 @@ def user_login(request):
     return render(request, 'account/login.html',{'form':form})
 
 
+# 회원 가입
 def register(request):
     if request.method == "POST":
         user_form = UserRegistrationForm(request.POST)
@@ -49,7 +50,7 @@ def register(request):
     )
 
 
-
+# 대시보드
 @login_required
 def dashboard(request):
     return render(request,
