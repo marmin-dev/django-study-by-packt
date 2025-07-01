@@ -24,7 +24,16 @@
         </p>
         <p>
             Please, use the following form to log-in.
-            If yoyu don't have an account <a href="{% url "register" %}">register here</a>
+            If you don't have an account <a href="{% url "register" %}">register here</a>
         </p>
+    </div>
+    <div class="social">
+        <ul>
+            <li class="google">
+                <a href="{% url "social:begin" "google-oauth2" %}">
+                    Sign in with Google
+                </a>
+            </li>
+        </ul>
     </div>
 {% endblock %}

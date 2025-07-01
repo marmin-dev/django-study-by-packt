@@ -112,6 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
+    'social_core.backends.google.GoogleOAuth2',
 ]
 
 # Internationalization
@@ -153,3 +154,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 MEDIA_URL='/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.getenv('GOOGLE_OAUTH2_KEY')
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.getenv('GOOGLE_OAUTH2_SECRET')
+SOCIAL_AUTH_GOOGLE_OAUTH2_REDIRECT_URI = 'https://mysite.com:8000/social_auth/complete/google-oauth2/'

@@ -17,6 +17,7 @@
 
 ### Django 명령어
 - 개발 서버 시작 : `python manage.py runserver`
+- ssl 개발 서버 시작: `python manage.py runserver_plus --cert-file cert.crt`
 - 쉘 시작 : `python manage.py shell`
 - 마이그레이션 make : `python manage.py makemigrations`
 - 마이그레이션 : `python manage.py migrate`
