@@ -6,6 +6,10 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/', include('account.urls')),
+    path(
+        'social_auth/',
+        include('social_django.urls', namespace='social')
+    )
 ]
 
 # Static 파일 주소 추가
