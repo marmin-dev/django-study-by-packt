@@ -13,14 +13,15 @@ class ImageCreateForm(forms.ModelForm):
         model = Image
         fields = ['title', 'url', 'description']
         widgets = {
-            'url': forms.HiddenInput(),
+            'url': forms.HiddenInput,
         }
 
 
     def clean_url(self):
         url = self.cleaned_data['url']
-        valid_extensions = ['.jpg', '.jpeg', '.png']
-        extension = url.split('.', 1)[1].lower()
+        valid_extensions = ['jpg', 'jpeg', 'png']
+        extension = url.rsplit('.', 1)[1].lower()
+        print(extension)
         if extension not in valid_extensions:
             raise forms.ValidationError(
                 'The given URL does not match valid image extensions.'
@@ -36,7 +37,11 @@ class ImageCreateForm(forms.ModelForm):
         image_name = f"{name}.{extension}"
         # 사용자가 입력한 URL 에서 이미지 다운로드
         response = requests.get(image.url)
-        image.image.save(image_name, ContentFile(response.content), save=False)
+        image.image.save(
+            image_name,
+            ContentFile(response.content),
+            save=False
+        )
         if commit:
             image.save()
         return image
