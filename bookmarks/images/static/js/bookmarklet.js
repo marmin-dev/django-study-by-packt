@@ -18,6 +18,27 @@ boxHtml = `
         <a href="#" id="close">&times;</a>
         <h1>Select an image to bookmark:</h1>
         <div class="images"></div>
-    </div>;
-`
+    </div>
+`;
 body.innerHTML += boxHtml;
+
+function bookmarkletLaunch(){
+    bookmarklet = document.getElementById('bookmarklet');
+    var imagesFound = bookmarklet.querySelector('.images');
+    imagesFound.innerHTML = '';
+    bookmarklet.style.display = 'block';
+    bookmarklet.querySelector('#close')
+        .addEventListener('click',function(){
+            bookmarklet.style.display = 'none';
+        });
+    // find images in the DOM with the minimum dimensions
+    images = document.querySelectorAll('img[src$=".jpg"], img[src$=".jpeg"], img[src$=".png"]')
+    images.forEach(image => {
+        if(image.naturalWidth >= minWidth && image.naturalHeight >= minHeight){
+            var imageFound = document.createElement('img');
+            imageFound.src = image.src;
+            imagesFound.append(imageFound)
+        }
+    })
+}
+bookmarkletLaunch();
